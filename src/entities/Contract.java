@@ -1,12 +1,18 @@
 package entities;
 
-import java.sql.Date;
+import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Contract {
 
 	private Integer number;
 	private Date date;
 	private Double totalValue;
+	
+	public List<Installment> installments = new ArrayList<>();
+	
+	public Contract() {}
 	
 	public Contract(Integer number, Date date, Double totalValue) {
 		super();
@@ -38,8 +44,9 @@ public class Contract {
 	public void setTotalValue(Double totalValue) {
 		this.totalValue = totalValue;
 	}
-	
-	
-	
-	
+
+	public List<Installment> getInstallments() {
+		return installments;
+	}
+		
 }
